@@ -1,7 +1,4 @@
-from flask import Flask
+#!flask/bin/python
 
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return "Test!!!!"
+from app import app
+app.run(debug = True)
