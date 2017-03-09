@@ -5,11 +5,58 @@
 	<meta charset="UTF-8">
 
 	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+	<style>
+	.start-page {
+		align: center;
+	}
+
+	.btn-outline {
+	    background-color: transparent;
+	    color: inherit;
+	    transition: all .5s;
+	}
+
+	.btn-primary.btn-outline {
+	    color: #428bca;
+	}
+
+	.btn-success.btn-outline {
+	    color: #5cb85c;
+	}
+
+	.btn-info.btn-outline {
+	    color: #5bc0de;
+	}
+
+	.btn-warning.btn-outline {
+	    color: #f0ad4e;
+	}
+
+	.btn-danger.btn-outline {
+	    color: #d9534f;
+	}
+
+	</style>
 </head>
 
 <body>
-	<div class="row">
-	<h1>HAHA!</h1>
-	</div>
+	<nav class="navbar navbar-inverse bg-inverse fixed-top">
+			<div class="container-fluid">
+	        <a class="navbar-brand" href="#">J4ARTS</a>
+	        <button class="btn btn-outline btn-success btn-lg navbar-right" style="width:100px; margin-right: 20px;">
+	        Log in
+	        </button>
+        </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="start-page">
+
+        <h1>Art Service</h1>
+        <p class="lead">This is great service for posting arts, pictures and photos to your group in VK.</p>
+      </div>
+
+    </div>
 </body>
 </html>
