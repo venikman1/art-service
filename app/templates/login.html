@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Art service</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+	<style>
+	.start-page {
+		align: center;
+	}
+
+	.btn-outline {
+	    background-color: transparent;
+	    color: inherit;
+	    transition: all .5s;
+	}
+
+	.btn-primary.btn-outline {
+	    color: #428bca;
+	}
+
+	.btn-success.btn-outline {
+	    color: #5cb85c;
+	}
+
+	.btn-info.btn-outline {
+	    color: #5bc0de;
+	}
+
+	.btn-warning.btn-outline {
+	    color: #f0ad4e;
+	}
+
+	.btn-danger.btn-outline {
+	    color: #d9534f;
+	}
+
+	</style>
+</head>
+
+<body>
+<center>
+	<form method="POST">
+	<!--
+	  <div class="form-group">
+	    <label for="username">Username</label>
+	    input type="text" class="form-control" id="username" placeholder="Username">
+	  </div>
+	  <div class="form-group">
+	    <label for="pass">Password</label>
+	    <input type="password" class="form-control" id="pass" placeholder="Password">
+	  </div>
+	  <button type="submit" class="btn btn-default">Login</button>
+	  -->
+	  {{ form.csrf_token }}
+	  <div class="form-group">
+	    {{ form.username.label }} {{ form.username(size=20) }}
+	  </div>
+	  <div class="form-group">
+	    {{ form.password.label }} {{ form.password(size=20) }}
+	  </div>
+	  <button type="submit" class="btn btn-default">Login</button>
+	  
+	  
+	</form>
+	{% if errors %}
+		{% for error in errors %}
+			<span class="label label-danger">{{ error }}</span><br>
+		{% endfor %}
+	{% endif %}
+	{% for error in form.username.errors %}
+      <span class="label label-danger">{{ error }}</span><br>
+    {% endfor %}
+    {% for error in form.password.errors %}
+      <span class="label label-danger">{{ error }}</span><br>
+    {% endfor %}
+</center>
+</body>
+</html>

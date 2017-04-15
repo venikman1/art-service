@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Art service</title>
+	<meta charset="UTF-8">
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+	<style>
+	.start-page {
+		align: center;
+	}
+
+	.btn-outline {
+	    background-color: transparent;
+	    color: inherit;
+	    transition: all .5s;
+	}
+
+	.btn-primary.btn-outline {
+	    color: #428bca;
+	}
+
+	.btn-success.btn-outline {
+	    color: #5cb85c;
+	}
+
+	.btn-info.btn-outline {
+	    color: #5bc0de;
+	}
+
+	.btn-warning.btn-outline {
+	    color: #f0ad4e;
+	}
+
+	.btn-danger.btn-outline {
+	    color: #d9534f;
+	}
+
+	</style>
+</head>
+
+<body>
+	<h1>Hello, {{ name }}!</h1>
+	<a href = "/")> Back</a>
+</body>
+</html>
